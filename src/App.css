@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import "~antd/dist/antd.css";
+
+html {
+	font-family: "Nunito", sans-serif;
+}
+
+body {
+	font-size: 16px;
+}
+
+:root {
+	--first-color: #0d6efd;
+	--first-color-light: #2e1f6d;
+	--white-color: #f7f6fb;
+	--lightGrey: #bbbbbb;
+	--darkGrey: #9796a9;
+}
+
+.header {
+	padding: 0 1rem;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	flex-flow: right;
+}
+
+.sidebar {
+	box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+	height: 32px;
+	margin: 16px;
+	background: rgba(255, 255, 255, 0.3);
+	display: flex;
+	justify-content: center;
+}
+
+.site-layout .site-layout-background {
+	background: #fff;
+	/* min-height: 525px; */
+}
+[data-theme="dark"] .site-layout .site-layout-background {
+	background: #141414;
+}

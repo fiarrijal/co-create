@@ -1,0 +1,39 @@
+// Dependencies
+import React from "react";
+import Enzyme, { shallow } from "enzyme";
+import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
+// Components
+// import MyProject from "components/Layout/MyProject";
+import ProjectCard from "components/Layout/ProjectCard";
+
+//Configure enzyme for React 17
+Enzyme.configure({ adapter: new Adapter() });
+// test("test your component", () => {
+// 	const wrapper = mount(<App2 txt={"michaelangelo"} />);
+// 	expect(wrapper.find("p").text()).toEqual("hi michaelangelo");
+// });
+
+describe(`Test ProjectCard component`, () => {
+  const wrapper = shallow(<ProjectCard category="Game" date="1" deskripsi="deskripsi" nama="nama" />);
+  // describe(`Test Project component`, () => {
+  //   const wrapper = shallow(<MyProject category="Game" date="1" deskripsi="deskripsi" nama="nama" link="trello" />);
+
+  it(`Should render MyProjectCard`, () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+  it(`Should render category props`, () => {
+    expect(wrapper.find({ "data-testid": "category" }).text()).toBe("<DescriptionsItem />");
+  });
+  it(`Should render date props`, () => {
+    expect(wrapper.find({ "data-testid": "date" }).text()).toBe("<DescriptionsItem />");
+  });
+  it(`Should render deskripsi props`, () => {
+    expect(wrapper.find({ "data-testid": "deskripsi" }).text()).toBe("<DescriptionsItem />");
+  });
+  it(`Should render name props`, () => {
+    expect(wrapper.find({ "data-testid": "nama" }).text()).toBe("<DescriptionsItem />");
+  });
+  it(`Should render link props`, () => {
+    expect(wrapper.find({ "data-testid": "link" }).text()).toBe("<DescriptionsItem />");
+  });
+});
